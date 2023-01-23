@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import CardList from '../../components/CardList/CardList.component'
+import Filter from '../../components/Filter/Filter.component'
 import useDispatchHttpData from '../../utils/hooks/useDispatchHttpData'
 
 const HomePage = () => {
@@ -14,6 +15,7 @@ const HomePage = () => {
   return (
     <>
       <h1>HomePage</h1>
+      <Filter />
       <CardList />
     </>
   )
