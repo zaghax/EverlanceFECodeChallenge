@@ -1,5 +1,10 @@
+import Logo from '../Logo/Logo'
 const Header = () => {
-  return <header>Header</header>
+  return (
+    <header>
+      <Logo />
+    </header>
+  )
 }
 
 export default Header
