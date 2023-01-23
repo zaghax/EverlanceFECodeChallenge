@@ -1,8 +1,9 @@
 import { useState, useCallback } from 'react'
 import { API_BASE_URL } from '../constants'
+import { responseDataTypes } from '../../types/types'
 
 const useHttp = () => {
-  const [response, setResponse] = useState<any>()
+  const [response, setResponse] = useState<responseDataTypes>()
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
 

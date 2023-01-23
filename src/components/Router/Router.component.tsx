@@ -14,7 +14,7 @@ const Router = () => {
     <MainContainer>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path="/home" element={<Navigate replace to="/" />} />
+        <Route path='/home' element={<Navigate replace to='/' />} />
         <Route path='/user-detail' element={<UserDetailPage />} />
         <Route path='*' element={error404} />
       </Routes>

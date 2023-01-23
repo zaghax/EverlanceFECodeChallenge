@@ -1,13 +1,13 @@
-import { StoreState, cardInfoDataTypes } from '../types/types'
+import { StoreState, cardInfoDataTypes, responseDataTypes } from '../types/types'
 
 const initialStore: StoreState = {
   cardList: [],
-  userDetail: {},
+  userDetail: null,
 }
 
 export type ActionsType =
   | { type: 'setCardList'; payload: cardInfoDataTypes[] }
-  | { type: 'setCardInfo'; payload: cardInfoDataTypes }
+  | { type: 'setSelectedUserInfo'; payload: responseDataTypes | null }
 
 const storeReducer = (state: StoreState, action: ActionsType): StoreState => {
   switch (action.type) {
@@ -16,7 +16,7 @@ const storeReducer = (state: StoreState, action: ActionsType): StoreState => {
         ...state,
         cardList: action.payload,
       }
-    case 'setCardInfo':
+    case 'setSelectedUserInfo':
       return {
         ...state,
         userDetail: action.payload,
