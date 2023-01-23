@@ -5,7 +5,7 @@ const Filter = () => {
   const [inputValue, setInputValue] = useState<string>('')
   const { dispatchData } = useDispatchHttpData()
 
-  const listPath = `search/users?q=${inputValue}&page=1&per_page=10`
+  const listPath = `search/users?q=${inputValue}&page=1&per_page=12`
   const dispatchList = 'cardList'
 
   const filterHandler = (event: React.FormEvent<HTMLFormElement>) => {

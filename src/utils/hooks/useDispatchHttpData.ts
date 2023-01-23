@@ -16,12 +16,13 @@ const useDispatchHttpData = () => {
   )
 
   useEffect(() => {
-    
     if (storgeLocation !== '') {
       if (!isLoading && !error && response) {
         if (storgeLocation === 'cardList') {
           dispatch({ type: 'setCardList', payload: [] })
           dispatch({ type: 'setCardList', payload: response.items })
+          dispatch({ type: 'setTotalResults', payload: 0 })
+          dispatch({ type: 'setTotalResults', payload: response.total_count })
         }
         if (storgeLocation === 'selectedUserInfo') {
           dispatch({ type: 'setSelectedUserInfo', payload: null })
