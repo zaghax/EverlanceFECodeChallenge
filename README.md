@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# Everlance UI Testing Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a demo challenge site for Everlance.\
+For a quick preview please visit: https://tangerine-fox-c5642c.netlify.app
 
-## Available Scripts
+This site was builded using React and Typescript, you can install and run this site following the steps below:
 
-In the project directory, you can run:
+## Step 1
 
+Make sure you have installed Node Js in your local machine.\
+Install all the node packages of this project using NPM and running the following command in your terminal console:
+### `npm install`
+
+## Step 2
+
+Run this application usign the following command: 
 ### `npm start`
 
-Runs the app in the development mode.\
+It Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## This site is builded using the following packages
 
-### `npm run build`
+### Tailwind
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Used to add all the css styles on this page. \
+For more info please refer to https://tailwindcss.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## For cleaning code this project use the following linters
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Eslint
 
-### `npm run eject`
+Used to keep clean the javascrip and typescrip code.\
+For more info please refer to https://eslint.org/docs/latest/user-guide/configuring/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prettier
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Used as a code formatter.\
+For more info please refer to https://prettier.io/docs/en/editors.html
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Acceptance Criteria
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### GitHub API
+## User search
 
-## Learn More
+https://api.github.com/search/users?q=gabriel&page=1&per_page=10
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- q: The search bar input value
+- page: The current page number
+- Initial is 1
+- per_page: The current page size
+- initial is 10
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## User detail
+
+https://api.github.com/users/gabrielgarza
+
+## Technical Requirements
+
+1. [ ] To handle all requests and the app state please use React Query. // I used my own custom hooks
+It’s encouraged not to use a component library.
+You must at least build the search field component from scratch
+
+## Features
+
+2. [X] Search by username or email and return a list of results
+3. [X] Display each result as a card, 3 max per row.
+4. [X] Ability to view a profile detail on a different page
+5. [X] Ability to paginate and load more items to the list
+
+## Design
+
+6. [X] Please use Tailwind CSS
+
+This code was developed by:
+ 
+Giovanni Ortega Arias\
+Front-End Developer\
+Email: giortega@giorttega.com\
+Linkedin: https://www.linkedin.com/in/giovanni-ortega-arias
