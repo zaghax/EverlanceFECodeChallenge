@@ -19,9 +19,9 @@ const HomePage = () => {
 
   return (
     <div className='mt-4'>
-      <div className='flex justify-between items-center'>
-        <h1 className='text-3xl font-semibold text-gray-500'>GitHub Users</h1>
-        <div className='flex items-center'>
+      <div className='card-list-tools'>
+        <h1 className='card-list-tools__heading'>GitHub Users</h1>
+        <div className='card-list-tools__tools'>
           <Filter />
           <Paginator />
         </div>

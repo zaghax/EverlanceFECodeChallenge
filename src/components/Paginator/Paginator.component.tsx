@@ -38,7 +38,7 @@ const Paginator = () => {
       name='select'
       onChange={setPaginatorValue}
       defaultValue={currentPage}
-      className='border-gray-200 border-solid border p-1'
+      className='paginator'
     >
       {selectElements}
     </select>
