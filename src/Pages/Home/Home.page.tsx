@@ -18,12 +18,16 @@ const HomePage = () => {
   }, [])
 
   return (
-    <>
-      <h1>HomePage</h1>
-      <Filter />
-      <Paginator />
+    <div className='mt-4' >
+      <div className='flex justify-between items-center'>
+        <h1 className='text-3xl font-semibold text-gray-500'>GitHub Users</h1>
+        <div className='flex items-center'>
+          <Filter />
+          <Paginator />
+        </div>
+      </div>
       <CardList />
-    </>
+    </div>
   )
 }
 
