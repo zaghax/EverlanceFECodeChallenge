@@ -5,6 +5,7 @@ const initialStore: StoreState = {
   userDetail: null,
   totalResults: 0,
   searchParam: 'gabriel',
+  currentPage: 1,
 }
 
 export type ActionsType =
@@ -12,6 +13,7 @@ export type ActionsType =
   | { type: 'setSelectedUserInfo'; payload: responseDataTypes | null }
   | { type: 'setTotalResults'; payload: number }
   | { type: 'setSearchParam'; payload: string }
+  | { type: 'setCurrentPage'; payload: number }
 
 const storeReducer = (state: StoreState, action: ActionsType): StoreState => {
   switch (action.type) {
@@ -34,6 +36,11 @@ const storeReducer = (state: StoreState, action: ActionsType): StoreState => {
       return {
         ...state,
         searchParam: action.payload,
+      }
+    case 'setCurrentPage':
+      return {
+        ...state,
+        currentPage: action.payload,
       }
     default:
       return state

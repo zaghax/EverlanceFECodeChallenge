@@ -3,7 +3,7 @@ interface propTypes {
 }
 
 const MainContainer = ({ children }: propTypes) => {
-  return <main className="container mx-auto">{children}</main>
+  return <main className='container mx-auto'>{children}</main>
 }
 
 export default MainContainer

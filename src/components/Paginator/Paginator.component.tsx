@@ -4,8 +4,8 @@ import useDispatchHttpData from '../../utils/hooks/useDispatchHttpData'
 
 const Paginator = () => {
   const { dispatchData } = useDispatchHttpData()
-  const { store } = useContext(StoreContext)
-  const { totalResults, searchParam } = store
+  const { store, dispatch } = useContext(StoreContext)
+  const { totalResults, searchParam, currentPage } = store
 
   let maxPagesLength = 50
   const resultsPerPage = 12
@@ -17,10 +17,10 @@ const Paginator = () => {
   }
 
   const setPaginatorValue = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const page = event.target.value
+    const page = +event.target.value
     const listPath = `search/users?q=${searchParam}&page=${page}&per_page=${resultsPerPage}`
     dispatchData(listPath, dispatchList)
-    console.log(page)
+    dispatch({ type: 'setCurrentPage', payload: page })
   }
 
   const selectElements = []
@@ -34,7 +34,12 @@ const Paginator = () => {
   }
 
   return (
-    <select name='select' onChange={setPaginatorValue} className="border-gray-200 border-solid border p-1">
+    <select
+      name='select'
+      onChange={setPaginatorValue}
+      defaultValue={currentPage}
+      className='border-gray-200 border-solid border p-1'
+    >
       {selectElements}
     </select>
   )

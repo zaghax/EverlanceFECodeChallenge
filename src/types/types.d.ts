@@ -68,4 +68,5 @@ export interface StoreState {
   userDetail: responseDataTypes | null
   totalResults: number
   searchParam: string
+  currentPage: number
 }

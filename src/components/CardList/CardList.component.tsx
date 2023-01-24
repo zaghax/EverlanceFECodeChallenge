@@ -7,9 +7,19 @@ const CardList = () => {
   const { store } = useContext(StoreContext)
   const { cardList } = store
 
+  const noElements = (
+    <div className='section-title'>
+      <h3>Uupps!!!, there are no elements! </h3>
+    </div>
+  )
+
   return (
-    <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-      {cardList.length > 0 && cardList.map((card) => <Card cardInfo={card} key={card.id} />)}
+    <div className='mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+      {cardList.length > 0 ? (
+        cardList.map((card) => <Card cardInfo={card} key={card.id} />)
+      ) : (
+        <>{noElements}</>
+      )}
     </div>
   )
 }

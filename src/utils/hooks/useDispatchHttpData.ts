@@ -27,7 +27,6 @@ const useDispatchHttpData = () => {
         if (storgeLocation === 'selectedUserInfo') {
           dispatch({ type: 'setSelectedUserInfo', payload: null })
           dispatch({ type: 'setSelectedUserInfo', payload: response })
-          console.log(response)
         }
       }
     }
