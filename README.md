@@ -61,9 +61,11 @@ https://api.github.com/users/gabrielgarza
 
 ## Technical Requirements
 
-1. [ ] To handle all requests and the app state please use React Query. // I used my own custom hooks
+1. [ ] To handle all requests and the app state please use React Query. 
 It’s encouraged not to use a component library.
 You must at least build the search field component from scratch
+
+// I used my own custom hooks to handle the requests
 
 ## Features
 
